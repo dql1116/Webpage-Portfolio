@@ -41,7 +41,7 @@ export default function Intro() {
           </div>
           <div className={styles.actionButtons}>
             <a 
-              href="mailto:dqlee@ucdavis.edu"
+              href="mailto:davidqlee03@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.touchButton}
