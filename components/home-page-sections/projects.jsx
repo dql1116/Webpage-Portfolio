@@ -16,7 +16,7 @@ export default function Experience() {
     },
     {
         id: "journally-icon",
-        color: "rgba(141, 148, 254, 1)",
+        color: "rgba(146, 158, 255, 1)",
         // color: "rgba(255, 255, 255, 1)",
         img: "/images/journally.png",
         // img: "/images/github.png",

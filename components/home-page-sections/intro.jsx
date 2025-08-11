@@ -8,7 +8,7 @@ export default function Intro() {
     <section className={styles.body}>
       <div className={styles.mainContainer}>
         <Image
-          src="/images/github.png"
+          src="/images/David.png"
           className={styles.profileImg}
           width={450}
           height={450}
