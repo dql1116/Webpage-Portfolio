@@ -55,3 +55,45 @@
     color: #000;
     border-color: #fff;
 }
+
+@media (max-width: 425px) {
+    .body {
+        padding-top: 25px;
+        top: -25px;
+    }
+
+    .header {
+        gap: 14px;
+        height: 50px;
+    }
+
+    .headerTab {
+        font-size: 18px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        width: 320px;
+        gap: 12px;
+    }
+
+    .headerTab {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        width: 280px;
+        height: 45px;
+        gap: 10px;
+    }
+
+    .headerTab {
+        height: 35px;
+        font-size: 14px;
+        padding: 0 14px;
+    }
+}

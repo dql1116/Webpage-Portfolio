@@ -1,8 +1,7 @@
 .body {
   width: 100%;
   height: 800px;
-  /* background-color: aliceblue; */
-  padding: 100px 250px;
+  padding: 100px 450px;
 }
 
 .mainContainer {
@@ -13,16 +12,15 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  /* justify-content: space-between; */
 }
 
 .profileImg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
 }
 
 .headerContainer {
@@ -39,7 +37,6 @@
   flex-direction: column;
   padding-top: 5px;
   gap: 30px;
-  /* height: 100%; */
   justify-content: center;
 }
 
@@ -51,7 +48,17 @@
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  /* color: rgba(245, 245, 245, 1); */
+  color: rgba(251, 189, 32, 1);
+}
+
+.title::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .description {
@@ -124,4 +131,132 @@
   background: #fff;
   color: #000;
   transform: translateY(-4px); 
+}
+
+@media (max-width: 2560px) {
+  .body {
+    padding: 100px 250px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .body {
+    padding: 100px 150px;
+    height: 800px;
+  }
+
+  .profileImg {
+    width: 400px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .body {
+    padding: 80px 0px;
+    height: 100%;
+  }
+
+  .mainContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .header {
+    gap: 15px;
+  }
+
+  .headerContainer {
+    width: 80%;
+  }
+
+  .profileImg {
+    width: 350px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .touchButton, .cvButton {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  .body {
+    padding: 50px 0px;
+    height: 100%;
+  }
+
+  .mainContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .headerContainer {
+    width: 85%;
+  }
+
+  .profileImg {
+    width: 300px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .touchButton, .cvButton {
+    font-size: 14px;
+    padding: 0;
+    width: 150px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 375px) {
+  .body {
+    padding: 50px 0px;
+    height: 100%;
+  }
+
+  .mainContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .profileImg {
+    width: 250px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .touchButton, .cvButton {
+    height: 44px;
+  }
 }

@@ -2,8 +2,24 @@
 
 import Image from 'next/image';
 import styles from './intro.module.css';
+import { useEffect, useState } from 'react';
 
 export default function Intro() {
+  const fullTitle = "Hello, my name is David Lee";
+  const [typedTitle, setTypedTitle] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedTitle(fullTitle.slice(0, index + 1));
+      index++;
+      if (index === fullTitle.length) clearInterval(interval);
+    }, 80);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <section className={styles.body}>
       <div className={styles.mainContainer}>
@@ -16,7 +32,7 @@ export default function Intro() {
         />
         <div className={styles.headerContainer}>
           <div className={styles.header}>
-            <h1 className={styles.title}>Hello, my name is David Lee</h1>
+            <h1 className={styles.title}>{typedTitle}</h1>
             <h2 className={styles.description}>
               I am a fourth-year Computer Science student at the University of California, Davis.
               I'm currently working on front-end development and growing into full stack development.
