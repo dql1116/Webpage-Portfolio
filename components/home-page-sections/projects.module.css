@@ -1,6 +1,6 @@
 .body {
     width: 100%;
-    padding: 120px 250px;
+    padding: 120px 450px;
 }
 
 .mainContainer {
@@ -40,4 +40,56 @@
     justify-content: center;
     gap: 100px;
     flex: 1 1 0;
+}
+
+@media (max-width: 2560px) {
+  .body {
+    padding: 120px 250px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .body {
+    padding: 120px 150px;
+  }
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .body {
+        padding: 120px 0px;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .projectContainer {
+        gap: 28px;
+    }
+
+    .cardContainer {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 425px) {
+    .body {
+        padding: 50px 0px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
 }

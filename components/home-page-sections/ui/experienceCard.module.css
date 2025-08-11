@@ -30,7 +30,7 @@
 .date {
     font-weight: 400;
     font-size: 14.49px;
-    line-height: 150%;
+    line-height: 100%;
     letter-spacing: 0%;
     color: rgba(132, 145, 160, 1);
 }
@@ -43,4 +43,72 @@
     letter-spacing: 0%;
     vertical-align: middle;
     color: rgba(132, 145, 160, 1);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .iconImage {
+        width: 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        font-size: 12px;
+    }
+
+    .date {
+        font-size: 10px;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+    .iconImage {
+        width: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+    
+    .iconImage {
+        width: 30px;
+    }
 }

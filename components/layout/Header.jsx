@@ -38,8 +38,16 @@ export default function Header(){
     const handleClick = (id) => (e) => {
         e.preventDefault();
         const target = document.getElementById(id);
+        const header = document.querySelector(`.${styles.body}`);
+
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const headerHeight = header ? header.offsetHeight : 0;
+            const visualOffset = header
+            ? Math.abs(parseInt(getComputedStyle(header).top, 10) || 0)  // 50 or 25
+            : 0;
+
+            const y = target.getBoundingClientRect().top + window.scrollY - headerHeight + visualOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
             setActive(id);
         }
     };

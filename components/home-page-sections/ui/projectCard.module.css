@@ -28,3 +28,29 @@
     font-size: 14px;
     line-height: normal;
 }
+
+@media (max-width: 1024px) {
+    .card {
+        width: 250px;
+        height: 325px;
+        gap: 16px;
+        background-color: black;
+    }
+
+    .imageContainer {
+        width: 250px;
+        height: 250px;
+    }
+
+    .projectImg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projectText {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 12px;
+        line-height: normal;
+    }
+}
