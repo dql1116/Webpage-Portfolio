@@ -1,4 +1,5 @@
-// import SCSS file as styles for this component
+'use client'
+
 import styles from './Footer.module.css';
 
 export default function Footer() {

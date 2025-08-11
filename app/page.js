@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout>
       <section id="about" className="section"><Intro/></section>
-      <section id="work" className="section"></section>
+      <section id="work" className="section"><Experience/></section>
       <section id="projects" className="section"></section>
     </Layout>
   );

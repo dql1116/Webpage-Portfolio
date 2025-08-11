@@ -1,0 +1,46 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 23.62px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.titleDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 1 0;
+}
+
+.title {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 21.74px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.date {
+    font-weight: 400;
+    font-size: 14.49px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: rgba(132, 145, 160, 1);
+}
+
+.description {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14.49px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: rgba(132, 145, 160, 1);
+}
