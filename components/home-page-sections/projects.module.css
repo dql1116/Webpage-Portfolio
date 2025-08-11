@@ -1,0 +1,43 @@
+.body {
+    width: 100%;
+    padding: 120px 250px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+}
+
+.title {
+    width: 100%;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 10%;
+    text-decoration-thickness: 10%;
+    text-decoration-skip-ink: auto;
+    text-decoration-color: rgba(251, 189, 32, 1);
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 48px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 100px;
+    flex: 1 1 0;
+}

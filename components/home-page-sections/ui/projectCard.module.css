@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 525px;
+    gap: 24px;
+}
+
+.imageContainer {
+    display: flex;
+    width: 450px;
+    height: 450px;
+    border-radius: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+}
+
+.projectText {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    line-height: normal;
+}
