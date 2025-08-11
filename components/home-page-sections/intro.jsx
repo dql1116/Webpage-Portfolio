@@ -49,7 +49,7 @@ export default function Intro() {
               Get In Touch
             </a>
             <a 
-              href="/cv/David_Lee_Resume.pdf"
+              href="/cv/David-Lee-Resume.pdf"
               target="_blank"
               rel="noopener"
               className={styles.cvButton}
