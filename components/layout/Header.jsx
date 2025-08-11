@@ -13,28 +13,38 @@ export default function Header(){
     const [active, setActive] = useState('about');
 
     useEffect(() => {
-        const sectionEls = TABS
+        const sections = TABS
             .map(({ id }) => document.getElementById(id))
             .filter((el) => el instanceof Element);
+        if (!sections.length) return;
 
-        if (!sectionEls.length) return;
+        const cb = (entries) => {
+            const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible?.target?.id) setActive(visible.target.id);
+        };
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visible = entries
-                .filter((e) => e.isIntersecting)
-                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        let observer;
+        const build = () => {
+            if (observer) observer.disconnect();
+            const thr = window.innerWidth <= 768 ? 0.12 : 0.55; // tweak mobile threshold
+            observer = new IntersectionObserver(cb, { threshold: thr });
+            sections.forEach((el) => observer.observe(el));
+        };
 
-                if (visible && visible.target && visible.target.id) {
-                setActive(visible.target.id);
-                }
-            },
-            { threshold: 0.55 }
-        );
-        sectionEls.forEach((el) => observer.observe(el));
-        return () => observer.disconnect();
+        build();
+        const rebuild = () => build();
+        window.addEventListener('resize', rebuild, { passive: true });
+        window.addEventListener('orientationchange', rebuild, { passive: true });
+
+        return () => {
+            observer?.disconnect();
+            window.removeEventListener('resize', rebuild);
+            window.removeEventListener('orientationchange', rebuild);
+        };
     }, []);
-
+    
     const handleClick = (id) => (e) => {
         e.preventDefault();
         const target = document.getElementById(id);
