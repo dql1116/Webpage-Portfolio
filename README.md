@@ -42,3 +42,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ```python
 print("Hello, world!")
 ```
+
+https://fakewebsite.com
+(https://fakewebsite.com)
