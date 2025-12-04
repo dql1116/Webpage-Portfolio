@@ -44,4 +44,4 @@ print("Hello, world!")
 ```
 
 https://fakewebsite.com
-(https://fakewebsite.com)
+<https://fakewebsite.com>
